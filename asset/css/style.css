@@ -229,10 +229,6 @@ padding: 5%;
 color: #3a3a3a;
 }
 /* gallery */
-
-/* Adjustments for #photos section */
-/* gallery */
-
 #photos {
 clear: both;
 line-height: 0;
@@ -252,68 +248,102 @@ transition: transform 0.3s ease-in-out;
 #photos img:hover {
 transform: scale(1.05);  
 }
+#signup {
+    background-image: url('../image/hy.jpg');  
+    background-size: contain;  
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px 0;
+    text-align: center;
+}
+
+#signup-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8); /* Optionally add a semi-transparent background color */
+}
+
+
+#signup-form h2 {
+margin-bottom: 20px;
+}
+
+#signup-form form {
+display: flex;
+flex-direction: column;
+}
+
+#signup-form label {
+font-weight: bold;
+}
+
+#signup-form input[type="text"],
+#signup-form input[type="email"],
+#signup-form input[type="password"],
+#signup-form input[type="submit"] {
+width: 100%;
+padding: 10px;
+margin-bottom: 15px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+}
+
+#signup-form input[type="submit"] {
+background-color: #4CAF50;
+color: white;
+cursor: pointer;
+}
+
+#signup-form input[type="submit"]:hover {
+background-color: #45a049;
+}
+
 
 /* Media queries */
 
-@media screen and (max-width: 1200px) {
+/* For medium screen sizes from 950px wide and down */
+@media screen and (max-width: 950px) {
+
+#menu {
+clear: left;
+float: left;
+margin-left: 30px;
+margin-bottom: 20px;
+line-height: 25px;
+}
+
+#cover-text {
+left: 0;
+}
+
 #club-ethos {
-width: 65%;
+width: 90%;
 height: 1200px;
 margin: 0 auto;
 }
 
-#welcome {
-padding: 30px 0;
-margin: 0;
+.left-about-heading, .right-about-heading {
+width: inherit;
 }
 
-#left-about, #right-about {
+.left-about-heading h2, .right-about-heading h2 {
 width: 100%;
-float: left;
-padding: 0;
+text-align: center;
 }
 
-#center-about {
-clear: both;
-width: 100%;
-float: left;
-padding: 0;
-}
-
-hr {
-display: none;
+.left-about-heading p, .right-about-heading p {
+text-align: center;
+padding: 0 20px;
 }
 }
 
-
-/* Media queries */
-
-@media screen and (max-width: 1200px) {
-#club-ethos {
-width: 65%;
-height: 1200px;
-margin: 0 auto;
-}
-
-#welcome {
-padding: 30px 0;
-margin: 0;
-}
-
-#left-about, #right-about {
-width: 100%;
-float: left;
-padding: 0;
-}
-
-#center-about {
-clear: both;
-width: 100%;
-float: left;
-padding: 0;
-}
-
-hr {
-display: none;
+/* For small screen sizes below 800px width */
+@media screen and (max-width: 800px) {
+#photos {
+column-count: 2;
 }
 }
