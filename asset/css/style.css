@@ -248,102 +248,169 @@ transition: transform 0.3s ease-in-out;
 #photos img:hover {
 transform: scale(1.05);  
 }
-#signup {
-    background-image: url('../image/hy.jpg');  
-    background-size: contain;  
+
+/*signup*/
+ 
+
+.form-section {
+    clear: left;
+    background: url("../image/hy.jpg");
+    background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    padding: 40px 0;
-    text-align: center;
+    height: calc(100vh - 20px);  
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #signup-form {
+    position: relative;  
+    margin: 0 auto; 
+    color: #fff;
+    background-color: rgba(60, 60, 60, 0.6);
     max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.8); /* Optionally add a semi-transparent background color */
+    padding: 30px;
+    text-align: center; 
 }
-
 
 #signup-form h2 {
-margin-bottom: 20px;
+    color: #fafafa;
+    margin-bottom: 20px;
 }
 
-#signup-form form {
-display: flex;
-flex-direction: column;
+.text-input {
+    background: transparent;
+    color: #fafafa;
+    width: calc(100% - 20px); 
+    height: 40px; 
+    margin: 10px 0; 
+    padding: 10px;
+    border: 1px solid #fafafa;
+    border-radius: 4px;
+    box-sizing: border-box; 
 }
 
-#signup-form label {
-font-weight: bold;
+.text-input:hover {
+    border-color: #f16c6b;
 }
 
-#signup-form input[type="text"],
-#signup-form input[type="email"],
-#signup-form input[type="password"],
-#signup-form input[type="submit"] {
-width: 100%;
-padding: 10px;
-margin-bottom: 15px;
-border: 1px solid #ccc;
-border-radius: 4px;
-box-sizing: border-box;
+.join-button {
+    margin-top: 20px;
+    border-radius: 4px;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px; 
+    background-color: #f16c6b;
+    color: #fafafa;
+    border: none;
+    cursor: pointer;
+    display: inline-block; 
 }
 
-#signup-form input[type="submit"] {
-background-color: #4CAF50;
-color: white;
-cursor: pointer;
+.join-button:hover {
+    background-color: #fafafa;
+    color: #f16c6b;
 }
 
-#signup-form input[type="submit"]:hover {
-background-color: #45a049;
-}
 
 
 /* Media queries */
+/* For large screens up to 1200px wide */
+@media screen and (max-width: 1200px) {
+    /* Adjustments for #club-ethos */
+    #club-ethos {
+        width: 65%; /* Set width to 65% */
+        height: 1200px; /* Set height to 1200px */
+        margin: 0 auto; /* Center align with auto margins */
+    }
 
-/* For medium screen sizes from 950px wide and down */
+    /* Adjustments for #welcome */
+    #welcome {
+        padding: 30px 0; /* Add padding of 30px top and bottom, 0 left and right */
+        margin-top: 0; /* Remove top margin */
+    }
+
+    /* Adjustments for #left-about and #right-about */
+    #left-about, #right-about {
+        width: 100%; /* Set width to 100% */
+        float: left; /* Float left for side-by-side alignment */
+        padding: 0; /* Reset padding */
+    }
+
+    /* Adjustments for #center-about */
+    #center-about {
+        clear: both; /* Clear floats */
+        width: 100%; /* Set width to 100% */
+        float: left; /* Float left for full-width alignment */
+        padding: 0; /* Reset padding */
+    }
+
+    /* Adjustments for #times div */
+    #times div {
+        width: 100%; /* Set width to 100% */
+        clear: both; /* Clear floats */
+        height: 150px; /* Set height to 150px */
+        padding: 0; /* Reset padding */
+    }
+
+    /* Hide horizontal rule */
+    hr {
+        display: none; /* Hide horizontal rule */
+    }
+}
+
+/* For medium screens from 950px wide and down */
 @media screen and (max-width: 950px) {
+    /* Adjustments for #menu */
+    #menu {
+        clear: left; /* Clear float */
+        float: left; /* Float left */
+        margin-left: 30px; /* Add left margin */
+        margin-bottom: 20px; /* Add bottom margin */
+        line-height: 25px; /* Set line height */
+    }
 
-#menu {
-clear: left;
-float: left;
-margin-left: 30px;
-margin-bottom: 20px;
-line-height: 25px;
+    /* Adjustments for #cover-text */
+    #cover-text {
+        left: 0; /* Set left position */
+    }
+
+    /* Adjustments for #club-ethos */
+    #club-ethos {
+        width: 90%; /* Set width to 90% */
+        height: 1200px; /* Set height to 1200px */
+        margin: 0 auto; /* Center align with auto margins */
+    }
+
+    /* Adjustments for .left-about-heading and .right-about-heading */
+    .left-about-heading, .right-about-heading {
+        width: inherit; /* Inherit width */
+    }
+
+    /* Adjustments for headings inside .left-about-heading and .right-about-heading */
+    .left-about-heading h2, .right-about-heading h2 {
+        width: 100%; /* Set width to 100% */
+        text-align: center; /* Center align text */
+    }
+
+    /* Adjustments for paragraphs inside .left-about-heading and .right-about-heading */
+    .left-about-heading p, .right-about-heading p {
+        text-align: center; /* Center align text */
+        padding: 0 20px; /* Add padding of 0 top and bottom, 20px left and right */
+    }
+
+    /* Adjustments for #photo */
+    #photo {
+        column-count: 3; /* Display in 3 columns */
+    }
 }
 
-#cover-text {
-left: 0;
-}
-
-#club-ethos {
-width: 90%;
-height: 1200px;
-margin: 0 auto;
-}
-
-.left-about-heading, .right-about-heading {
-width: inherit;
-}
-
-.left-about-heading h2, .right-about-heading h2 {
-width: 100%;
-text-align: center;
-}
-
-.left-about-heading p, .right-about-heading p {
-text-align: center;
-padding: 0 20px;
-}
-}
-
-/* For small screen sizes below 800px width */
+/* For small screens from 800px wide and down */
 @media screen and (max-width: 800px) {
-#photos {
-column-count: 2;
+    /* Adjustments for #photo */
+    #photo {
+        column-count: 2; /* Display in 2 columns */
+    }
 }
-}
+
+ 
